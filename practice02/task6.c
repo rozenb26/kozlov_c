@@ -2,11 +2,12 @@
 
 int main() {
 int N;
-int sum;  
+int sum = 0;  
 scanf("%d", &N);
 for (int i = 1; i < N; i++ ) {
 if (i%2==0) sum += 1;
 
 
 }
+printf("%d", sum);
 }

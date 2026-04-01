@@ -1,0 +1,17 @@
+#include <stdio.h>
+int main(void) {
+    int N;
+    scanf("%d", &N);
+    int numbers[N];
+    for (int i = 0; i < N; i++) {
+        scanf("%d", &numbers[i]);
+    }
+    int current_sum = numbers[0];
+    int max_sum = numbers[0];
+    for (int i = 1; i < N; i++) {
+        if (numbers[i] > current_sum+ numbers[i+1]) current_sum = numbers[i];
+        else current_sum = current_sum + numbers[i];
+        if (current_sum > max_sum) max_sum = current_sum;
+    }
+    printf("%d\n", max_sum);
+    }
